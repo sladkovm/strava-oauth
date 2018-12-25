@@ -1,7 +1,7 @@
 # strava-oauth
 Lightweight python server that implements [Strava Oauth Web Flow](http://developers.strava.com/docs/authentication/)
 
-Install:
+## Install:
 
 ```bash
 git clone https://github.com/sladkovm/strava-oauth.git
@@ -10,13 +10,21 @@ pipenv shell
 pipenv install --skip-lock
 ```
 
-Run:
+
+## Run:
+
+Before run set environmental variables that represent your [application](https://www.strava.com/settings/api):
+
+```bash
+export STRAVA_CLIENT_ID=<the-actual-id>
+export STRAVA_CLIENT_SECRET=<the-actual-secret>
+```
 
 ```python
 python api.py
 ```
 
-Use:
+## Use:
 
 In the web browser go to: *http://127.0.0.1:5042/authorize*
 
@@ -24,7 +32,7 @@ In the web browser go to: *http://127.0.0.1:5042/authorize*
 2. After authorization is granted, the browser will display a raw JSON with the authorization tokens
 3. Extend and build on it
 
-Example response:
+## Example response:
 
 ```
 Example Response
@@ -40,4 +48,5 @@ Example Response
 }
 ```
 
-Friendly warning: This server is built on [python-responder](https://github.com/kennethreitz/responder), which is an awesome Python API Framework for Humans(TM), but is in active development phase ... that is why I use *--skip-lock* for example. 
+## Friendly warning
+This server is built on [python-responder](https://github.com/kennethreitz/responder), which is an awesome Python API Framework for Humans(TM), but is in active development phase ... that is why I use *--skip-lock* for example.

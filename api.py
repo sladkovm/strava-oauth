@@ -42,4 +42,4 @@ def authorization_successful(req, resp):
 
 
 if __name__ == "__main__":
-    api.run(debug=True)
+    api.run()
