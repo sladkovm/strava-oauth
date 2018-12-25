@@ -13,7 +13,7 @@ def authorize_url():
         "response_type": "code",
         "redirect_uri": "http://localhost:5042/authorization_successful",
         "scope": "read",
-        "state": 'state+',
+        "state": 'https://github.com/sladkovm/strava-oauth',
         "approval_prompt": "force"
     }
     values_url = urllib.parse.urlencode(params)
