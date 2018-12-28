@@ -12,7 +12,7 @@ def authorize_url():
         "client_id": os.getenv('STRAVA_CLIENT_ID'),
         "response_type": "code",
         "redirect_uri": "http://localhost:5042/authorization_successful",
-        "scope": "read,activity:read",
+        "scope": "read,profile:read_all,activity:read",
         "state": 'https://github.com/sladkovm/strava-oauth',
         "approval_prompt": "force"
     }
