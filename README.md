@@ -1,15 +1,27 @@
 # strava-oauth
 Lightweight python server that implements [Strava Oauth Web Flow](http://developers.strava.com/docs/authentication/)
 
+
+Example app is running at [Authorize](http://velometria.com/strava-oauth/authorize)
+
+**Warning:** The example app does not store the issued token or any other information receiverd from the Strava API. The token however is issued on behalf of the [velometria.com](http://velometria.com) so please use responsibly. The token will expire in 6 hours.
+
+Use it in tandem with Python library for Strava API [stravaio](https://github.com/sladkovm/stravaio)
+
 ## Install:
 
 ```bash
 git clone https://github.com/sladkovm/strava-oauth.git
 cd strava-oauth
 pipenv shell
-pipenv install --skip-lock
+pipenv install --pre
 ```
 
+If the installation fails on dependencies try:
+
+```bash
+pipenv install --skip-lock
+```
 
 ## Run:
 
@@ -49,4 +61,4 @@ Example Response
 ```
 
 ## Friendly warning
-This server is built on [python-responder](https://github.com/kennethreitz/responder), which is an awesome Python API Framework for Humans(TM), but is in active development phase ... that is why I use *--skip-lock* for example.
+This server is built on [python-responder](https://github.com/kennethreitz/responder), which is an awesome Python API Framework for Humans(TM), but is in active development phase ... that is why I use *--pre* and *--skip-lock* for example.
