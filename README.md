@@ -2,11 +2,11 @@
 Lightweight python server that implements [Strava Oauth Web Flow](http://developers.strava.com/docs/authentication/)
 
 
-Example app is running at [Authorize](http://velometria.com/strava-oauth/authorize)
+Example app is running at [Get a Strava Token](http://velometria.com/strava-oauth/authorize)
 
-**Warning:** The example app does not store the issued token or any other information receiverd from the Strava API. The token however is issued on behalf of the [velometria.com](http://velometria.com) so please use responsibly. The token will expire in 6 hours.
+**Warning:** The example app does not store the issued token or any other information receieved from the Strava API. The token however is issued on behalf of the [velometria.com](http://velometria.com) so please use responsibly. The token will expire in 6 hours.
 
-Use it in tandem with Python library for Strava API [stravaio](https://github.com/sladkovm/stravaio)
+Try the freshly fetched token together with a Python library for Strava API [stravaio](https://github.com/sladkovm/stravaio)
 
 ## Install:
 
