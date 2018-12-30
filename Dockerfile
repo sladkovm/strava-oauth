@@ -4,7 +4,7 @@ RUN mkdir -p /home/project/strava-oauth
 WORKDIR /home/project/strava-oauth
 COPY Pipfile /home/project/strava-oauth
 RUN pip install pipenv
-RUN pipenv install --skip-lock
+RUN pipenv install --skip-lock --verbose
 # RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /home/project/strava-oauth
