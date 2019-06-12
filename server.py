@@ -89,7 +89,6 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
         self.send_header('Content-type','text/html')
         self.end_headers()
         self.wfile.write(rv)
-        return
 
 
 if __name__ == "__main__":

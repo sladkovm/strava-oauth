@@ -23,6 +23,16 @@ If the installation fails on dependencies try:
 pipenv install --skip-lock
 ```
 
+## Before run
+
+Before run set environmental variables that represent your [application](https://www.strava.com/settings/api):
+
+```bash
+export STRAVA_CLIENT_ID=<the-actual-id>
+export STRAVA_CLIENT_SECRET=<the-actual-secret>
+```
+
+
 ## Run as local server:
 
 ```python
@@ -38,13 +48,6 @@ STRAVA_ACCESS_TOKEN=<the-actual-token>
 copy it to the environment variables.
 
 ## Run as a remote server API:
-
-Before run set environmental variables that represent your [application](https://www.strava.com/settings/api):
-
-```bash
-export STRAVA_CLIENT_ID=<the-actual-id>
-export STRAVA_CLIENT_SECRET=<the-actual-secret>
-```
 
 ```python
 python api.py
