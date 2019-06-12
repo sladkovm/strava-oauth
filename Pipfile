@@ -9,6 +9,7 @@ pylint = "*"
 [packages]
 responder = "*"
 starlette = "<0.9"
+loguru = "*"
 
 [requires]
 python_version = "3.6"
