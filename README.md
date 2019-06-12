@@ -33,11 +33,11 @@ This will lounch a local server, will open a default system webbrowser and the f
 handled withing the webbrowser. At the end you will get in the browser window:
 
 ```bash
-STRAVA_ACCESS_TOKEN=<the-actual-toke>
+STRAVA_ACCESS_TOKEN=<the-actual-token>
 ```
 copy it to the environment variables.
 
-## Run as remote server API:
+## Run as a remote server API:
 
 Before run set environmental variables that represent your [application](https://www.strava.com/settings/api):
 
