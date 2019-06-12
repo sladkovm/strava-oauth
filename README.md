@@ -23,7 +23,21 @@ If the installation fails on dependencies try:
 pipenv install --skip-lock
 ```
 
-## Run:
+## Run as local server:
+
+```python
+python server.py
+```
+
+This will lounch a local server, will open a default system webbrowser and the full athorization flow will be
+handled withing the webbrowser. At the end you will get in the browser window:
+
+```bash
+STRAVA_ACCESS_TOKEN=<the-actual-toke>
+```
+copy it to the environment variables.
+
+## Run as remote server API:
 
 Before run set environmental variables that represent your [application](https://www.strava.com/settings/api):
 
