@@ -33,7 +33,7 @@ export STRAVA_CLIENT_SECRET=<the-actual-secret>
 ```
 
 
-## Run as local server:
+## Run as local server (usese http.server from the standard library):
 
 ```python
 python server.py
@@ -47,7 +47,7 @@ STRAVA_ACCESS_TOKEN=<the-actual-token>
 ```
 copy it to the environment variables.
 
-## Run as a remote server API:
+## Run as a remote server API (uses responder):
 
 ```python
 python api.py

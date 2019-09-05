@@ -2,6 +2,7 @@ import responder
 import requests
 import os
 import urllib
+from loguru import logger
 
 api = responder.API()
 
@@ -12,7 +13,7 @@ def authorize_url():
     params = {
         "client_id": os.getenv('STRAVA_CLIENT_ID'),
         "response_type": "code",
-        "redirect_uri": f"{app_url}/strava-oauth/authorization_successful",
+        "redirect_uri": f"{app_url}/authorization_successful",
         "scope": "read,profile:read_all,activity:read",
         "state": 'https://github.com/sladkovm/strava-oauth',
         "approval_prompt": "force"
@@ -20,6 +21,7 @@ def authorize_url():
     values_url = urllib.parse.urlencode(params)
     base_url = 'https://www.strava.com/oauth/authorize'
     rv = base_url + '?' + values_url
+    logger.debug(rv)
     return rv
 
 
