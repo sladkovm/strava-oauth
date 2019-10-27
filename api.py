@@ -9,11 +9,11 @@ api = responder.API()
 
 def authorize_url():
     """Generate authorization uri"""
-    app_url = os.getenv('APP_URL', 'http://localhost:5042')
+    app_url = os.getenv('APP_URL', 'http://localhost')
     params = {
         "client_id": os.getenv('STRAVA_CLIENT_ID'),
         "response_type": "code",
-        "redirect_uri": f"{app_url}/authorization_successful",
+        "redirect_uri": f"{app_url}:5042/authorization_successful",
         "scope": "read,profile:read_all,activity:read",
         "state": 'https://github.com/sladkovm/strava-oauth',
         "approval_prompt": "force"
@@ -25,7 +25,7 @@ def authorize_url():
     return rv
 
 
-@api.route("//")
+@api.route("/")
 def home(req, resp):
     resp.text = "Welcome to strava-oauth"
 

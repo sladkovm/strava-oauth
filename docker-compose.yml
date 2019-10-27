@@ -8,8 +8,8 @@ services:
     build: .
     env_file:
       - .env
-    environment:
-      - APP_URL=http://dev.velometria.com
+    environment: 
+      - APP_URL=http://test.velometria.com
     ports:
       - "5042:5042"
     expose:
