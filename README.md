@@ -1,22 +1,21 @@
 # strava-oauth
 Lightweight python server that implements [Strava Oauth Web Flow](http://developers.strava.com/docs/authentication/)
 
+
 This repo comes with pre-configured *Dockerfile* and *docker-compose.yml*, which allows direct deployment by simply running:
 
 ```bash
 make build
 ```
 
+## Must
 
-## Before run
-
-Before run set environmental variables that represent your [application](https://www.strava.com/settings/api):
+Before using set environmental variables that represent your [application](https://www.strava.com/settings/api):
 
 ```bash
 export STRAVA_CLIENT_ID=<the-actual-id>
 export STRAVA_CLIENT_SECRET=<the-actual-secret>
 ```
-
 
 ## Quick start
 
@@ -25,13 +24,6 @@ git clone https://github.com/sladkovm/strava-oauth.git
 cd strava-oauth
 pipenv shell
 pipenv install --pre
-```
-
-Before run set environmental variables that represent your [application](https://www.strava.com/settings/api):
-
-```bash
-export STRAVA_CLIENT_ID=<the-actual-id>
-export STRAVA_CLIENT_SECRET=<the-actual-secret>
 ```
 
 Run the server:
