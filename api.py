@@ -10,6 +10,7 @@ api = responder.API()
 def authorize_url():
     """Generate authorization uri"""
     app_url = os.getenv('APP_URL', 'http://localhost')
+    logger.debug(f"APP_URL={app_url}")
     params = {
         "client_id": os.getenv('STRAVA_CLIENT_ID'),
         "response_type": "code",
@@ -51,6 +52,7 @@ def authorization_successful(req, resp):
         "grant_type": "authorization_code"
     }
     r = requests.post("https://www.strava.com/oauth/token", params)
+    logger.debug(r.text)
     resp.text = r.text
 
 

@@ -8,26 +8,10 @@ services:
     build: .
     env_file:
       - .env
-    environment: 
-      - APP_URL=http://test.velometria.com
+    # environment: 
+    #   - APP_URL=http://test.velometria.com
     ports:
       - "5042:5042"
     expose:
       - "5042"
     command: python api.py
-
-  # nginx:
-  #   container_name: nginx
-  #   restart: always
-  #   build: ./nginx
-  #   env_file:
-  #     - .env
-  #   ports:
-  #     - "80:80"
-  #   depends_on:
-  #     - vmdash
-  #     - vmapi
-  #     - strava-oauth
-  #     - db
-  #     # - mongo
-  #     # - mongo-express
