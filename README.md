@@ -63,7 +63,7 @@ In this case the callbacks will be redirected to `http://myapp.com:5042/authoriz
 
 Some gotchas:
 
-1. If you run docker directly from the terminal, the docker containers will be spawned at the *localhost*. In this case you don't need to specify the *APP_URL*. The server will be run as in the *Quick start* case - at *http://127.0.0.1:5042/authorize*
+1. If you run docker directly from the terminal (e.g. not in the docker-machine), the docker containers will be spawned at the *localhost*. In this case you don't need to specify the *APP_URL*. The server will be run as in the *Quick start* case - at *http://127.0.0.1:5042/authorize*
 
 2. If you run docker on the *docker-machine*, with a given IP, you will need to figure out how to redirect to this IP. The easiest way is to set `export APP_URL=dev.myapp.com`. Then add to the */etc/hosts* the following line: `<docker-machine IP>  dev.myapp.com`. This will send all Strava redirects to the docker-machine IP 
 
