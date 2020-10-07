@@ -8,7 +8,7 @@ This repo comes with pre-configured *Dockerfile* and *docker-compose.yml*, which
 make build
 ```
 
-## Must
+## Requirements
 
 Before using set environmental variables that represent your [application](https://www.strava.com/settings/api):
 
@@ -38,7 +38,7 @@ In the web browser go to: *http://127.0.0.1:5042/authorize*
 2. After authorization is granted, the browser will display a raw JSON with the authorization tokens
 3. Take it from here and build on it
 
-```
+```json
 Example Response
 {
   "token_type": "Bearer",
@@ -52,7 +52,7 @@ Example Response
 }
 ```
 
-## Run as a dockerized application
+## Running in docker
 
 First you need to build docker image from source code. This might take a while so be patient.
 
@@ -73,7 +73,7 @@ docker container run --rm  -p 5042:5042 -e STRAVA_CLIENT_ID=<the-actual-id> -e S
 ```
 In this case the callbacks will be redirected to `http://dev.myapp.com:5042/authorization_successful`
 
-Some gotchas:
+### Some gotchas
 
 1. If you run docker directly from the terminal (e.g. not in the docker-machine), the docker containers will be spawned at the *localhost*. In this case you don't need to specify the *APP_URL*. The server will be run as in the *Quick start* case - at *http://127.0.0.1:5042/authorize*
 
