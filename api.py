@@ -28,7 +28,8 @@ def authorize_url():
 
 @api.route("/")
 def home(req, resp):
-    resp.text = "Welcome to strava-oauth"
+    app_url = os.getenv('APP_URL', 'http://localhost')
+    resp.text = f"Welcome to strava-oauth, to start authorization go to: {app_url}:5042/authorize"
 
 
 @api.route("/client")
