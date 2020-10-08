@@ -44,7 +44,7 @@ Example Response
   "token_type": "Bearer",
   "access_token": "987654321234567898765432123456789",
   "athlete": {
-    #{summary athlete representation}
+    // {summary athlete representation}
   },
   "refresh_token": "1234567898765432112345678987654321",
   "expires_at": 1531378346,
