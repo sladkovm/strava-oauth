@@ -63,7 +63,7 @@ docker build -t strava-oauth .
 After image is succesfully built, you can run it in docker container. Make sure you provide STRAVA_CLIENT_ID and STRAVA_CLIENT_SECRET to docker container.
 
 ```bash
-docker container run --rm  -p 5042:5042 --e STRAVA_CLIENT_ID=<the-actual-id> -e STRAVA_CLIENT_SECRET=<the-actual-secret> strava-oauth:latest
+docker container run --rm  -p 5042:5042 -e STRAVA_CLIENT_ID=<the-actual-id> -e STRAVA_CLIENT_SECRET=<the-actual-secret> strava-oauth:latest
 ```
 
 Before you start, the container also make sure you provide APP_URL if you are not working on http://localhost:5047
