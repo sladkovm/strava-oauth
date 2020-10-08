@@ -1,9 +1,13 @@
-FROM python:3.7
+FROM python:3.7-alpine
+RUN mkdir -p /app
+RUN apk add --no-cache build-base
+COPY requirements.txt /app
+RUN pip install --no-cache-dir -r /app/requirements.txt \
+    && apk del build-base
 
-RUN mkdir -p /home/project/strava-oauth
-WORKDIR /home/project/strava-oauth
-COPY requirements.txt /home/project/strava-oauth
-RUN pip install --no-cache-dir -r requirements.txt
-COPY . /home/project/strava-oauth
+COPY api.py /app
+
 EXPOSE 5042
+
+WORKDIR /app
 CMD python api.py
